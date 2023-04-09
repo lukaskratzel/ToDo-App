@@ -40,11 +40,11 @@ $(document).on('click', '.js-delete', function(e) {
         data: {
             id: id
         },
-        success: (data) => {
+        success: () => {
             $(`[data-toggle="${id}"]`).fadeToggle()
         },
         error: (error) => {
-            console.log(error)
+            console.warn(error)
         }
     })
 })
